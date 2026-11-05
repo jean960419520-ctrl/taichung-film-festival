@@ -97,10 +97,13 @@
     }
 }
 
-/* ===== 最底下置中回首頁 ===== */
 
-.back-home {
-    display: table;
+/* ===== 頁尾回到首頁 ===== */
+
+.site-footer .back-home {
+    display: block;
+    width: fit-content;
+
     margin: 30px auto 0;
 
     color: #d4c18f;
@@ -108,13 +111,43 @@
     font-weight: 600;
 
     text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 6px;
 
-    transition: 0.3s;
+    /* 加入文字底線 */
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1px;
 }
 
-/* 滑鼠移上去 */
-.back-home:hover {
+.site-footer .back-home:hover {
     color: #ffffff;
+}
+
+
+/* ===== 首頁大標題調整 ===== */
+
+.hero .hero-text h1 {
+    font-size: clamp(22px, 3.6vw, 48px);
+
+    /* 強制標題維持一行 */
+    white-space: nowrap;
+
+    /* 縮小文字間距 */
+    letter-spacing: 0;
+
+    line-height: 1.5;
+}
+
+/* 手機版標題 */
+@media (max-width: 768px) {
+    .hero .hero-text h1 {
+        font-size: 24px;
+        letter-spacing: 0;
+    }
+}
+
+/* 小尺寸手機 */
+@media (max-width: 390px) {
+    .hero .hero-text h1 {
+        font-size: 21px;
+    }
 }
