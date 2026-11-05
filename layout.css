@@ -1,0 +1,144 @@
+
+/* ===== 網頁整體排版 ===== */
+
+/* 上方導覽列 */
+.site-header {
+    width: 100%;
+    background-color: #f9faf5;
+    border-bottom: 1px solid #dce4d9;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* 導覽列內容 */
+.header-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 22px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* 網站 LOGO */
+.logo {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 23px;
+    font-weight: 700;
+    color: #344b3a;
+    white-space: nowrap;
+}
+
+/* 上方導覽連結 */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 每個連結 */
+.navbar a {
+    font-size: 15px;
+    font-weight: 600;
+    color: #536858;
+
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+/* 滑鼠移過去 */
+.navbar a:hover {
+    color: #264c32;
+    border-bottom-color: #78987d;
+}
+
+/* 目前所在頁面 */
+.navbar a.active {
+    color: #264c32;
+    border-bottom-color: #78987d;
+}
+
+
+/* ===== 主要內容 GRID ===== */
+
+.main-grid {
+    max-width: 1300px;
+    margin: 80px auto;
+    padding: 0 35px;
+
+    display: grid;
+
+    /* 左邊較寬，右邊較窄 */
+    grid-template-columns:
+        minmax(0, 1.9fr)
+        minmax(260px, 0.85fr);
+
+    gap: 60px;
+    align-items: start;
+}
+
+/* 左邊文章區 */
+.main-content {
+    min-width: 0;
+}
+
+/* 右邊側邊欄 */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* 文章章節 */
+.content-section {
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+
+    border-bottom: 1px solid #dce4d9;
+}
+
+/* 最後一個章節 */
+.content-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* 三代車站 GRID */
+.station-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 35px;
+}
+
+/* 展區 GRID */
+.exhibition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 35px;
+}
+
+/* 頁尾 */
+.site-footer {
+    background-color: #2d4937;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.site-footer h3 {
+    margin-bottom: 20px;
+}
+
+.site-footer p {
+    color: #d5e2d6;
+    font-size: 14px;
+}

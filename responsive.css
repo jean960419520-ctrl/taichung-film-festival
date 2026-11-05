@@ -1,0 +1,129 @@
+
+/* ===== 平板版 ===== */
+
+@media (max-width: 1100px) {
+
+    /* 導覽列改成上下排列 */
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 18px 25px 0;
+    }
+
+    /* 水平導覽，可左右滑動 */
+    .navbar {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 8px;
+    }
+
+    .navbar a {
+        flex-shrink: 0;
+    }
+
+    /* 主要內容縮小間距 */
+    .main-grid {
+        gap: 30px;
+        padding: 0 25px;
+    }
+
+    /* 三代車站改成兩欄 */
+    .station-grid,
+    .exhibition-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-text {
+        padding: 50px;
+    }
+}
+
+
+/* ===== 手機版 ===== */
+
+@media (max-width: 768px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    /* 上方導覽直接顯示 */
+    .navbar {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 5px;
+        overflow-x: auto;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* 主視覺改成上下排列 */
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        padding: 60px 25px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        min-height: 300px;
+    }
+
+    /* 文章與側邊欄變成單欄 */
+    .main-grid {
+        grid-template-columns: 1fr;
+        margin: 45px auto;
+        padding: 0 20px;
+    }
+
+    /* 卡片變成一欄 */
+    .station-grid,
+    .exhibition-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        padding-bottom: 45px;
+        margin-bottom: 45px;
+    }
+
+    .content-section h2 {
+        font-size: 26px;
+    }
+
+    .info-card {
+        padding: 25px;
+    }
+}
+
+
+/* ===== 小尺寸手機 ===== */
+
+@media (max-width: 390px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-text {
+        padding: 50px 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}
