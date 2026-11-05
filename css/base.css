@@ -1,1 +1,74 @@
 
+/* ===== 全站基本設定 ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #526e5a;
+    --secondary-color: #7f9781;
+    --background-color: #f7f7f1;
+    --card-color: #ffffff;
+    --text-color: #293a30;
+    --light-text: #697b6e;
+    --border-color: #dce4d9;
+}
+
+/* 所有元素統一計算寬度 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 點擊導覽列時平滑移動 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 整個網頁 */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.9;
+}
+
+/* 標題字體 */
+h1, h2, h3 {
+    font-family: 'Noto Serif TC', serif;
+    line-height: 1.5;
+}
+
+/* 內文 */
+p {
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+/* 連結 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 圖片 */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* 清單 */
+ul {
+    padding-left: 20px;
+}
+
+/* 讓鍵盤操作更清楚 */
+a:focus-visible {
+    outline: 3px solid #809d82;
+    outline-offset: 4px;
+}
+
+/* 避免區塊被固定導覽列遮住 */
+section[id] {
+    scroll-margin-top: 130px;
+}
