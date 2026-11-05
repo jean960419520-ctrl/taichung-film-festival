@@ -187,4 +187,4 @@ https://zhen.gt.tc/
 
 ### Vercel
 
-（完成部署後補上正式網址）
+(https://taichung-film-festival.vercel.app/)
